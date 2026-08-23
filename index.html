@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Job Pulache Carreño — Desarrollador Full Stack</title>
+  <meta name="description"
+    content="Portafolio profesional de Job Isai Pulache Carreño. Desarrollador de software especializado en sistemas agroindustriales, aplicaciones web, bases de datos y soporte técnico. Python, JavaScript, SQL, .NET y Linux." />
+  <meta name="keywords"
+    content="Job Pulache Carreño, Desarrollador de Software, Portafolio Profesional, Sistemas Agroindustriales, Desarrollo Web, Bases de Datos, Soporte Técnico, Python, JavaScript, SQL, Linux, Piura, Perú">
+  <meta name="author" content="Job Isai Pulache Carreño">
+  <link id="favicon" rel="icon" type="image/png" sizes="256x256" href="Imgs/letra-j (1).png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- ═══════════════ TOP NAV (barra tipo LinkedIn) ═══════════════ -->
+  <header id="nav">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo" aria-label="Inicio">JobPulCar</a>
+
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <circle cx="7" cy="7" r="5.5" stroke="currentColor" stroke-width="1.4" />
+          <path d="M11.2 11.2L14.5 14.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" />
+        </svg>
+        <input type="text" id="siteSearch" placeholder="Buscar habilidades, proyectos, tecnologías…" autocomplete="off">
+      </div>
+
+      <nav class="nav-icons" aria-label="Secciones">
+        <a href="#hero" class="nav-item active" data-target="hero">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M4 11.5L12 4l8 7.5M6 10v9h5v-6h2v6h5v-9" stroke="currentColor" stroke-width="1.6"
+              stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          <span>Inicio</span>
+        </a>
+        <a href="#about" class="nav-item" data-target="about">
+          <svg viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="8" r="3.4" stroke="currentColor" stroke-width="1.6" />
+            <path d="M5 20c1-3.8 4-5.7 7-5.7s6 1.9 7 5.7" stroke="currentColor" stroke-width="1.6"
+              stroke-linecap="round" />
+          </svg>
+          <span>Acerca</span>
+        </a>
+        <a href="#experience" class="nav-item" data-target="experience">
+          <svg viewBox="0 0 24 24" fill="none">
+            <rect x="4" y="8" width="16" height="11" rx="1.5" stroke="currentColor" stroke-width="1.6" />
+            <path d="M8.5 8V6.5A1.5 1.5 0 0110 5h4a1.5 1.5 0 011.5 1.5V8" stroke="currentColor" stroke-width="1.6" />
+          </svg>
+          <span>Experiencia</span>
+        </a>
+        <a href="#projects" class="nav-item" data-target="projects">
+          <svg viewBox="0 0 24 24" fill="none">
+            <rect x="4" y="4" width="7" height="7" rx="1.2" stroke="currentColor" stroke-width="1.6" />
+            <rect x="13" y="4" width="7" height="7" rx="1.2" stroke="currentColor" stroke-width="1.6" />
+            <rect x="4" y="13" width="7" height="7" rx="1.2" stroke="currentColor" stroke-width="1.6" />
+            <rect x="13" y="13" width="7" height="7" rx="1.2" stroke="currentColor" stroke-width="1.6" />
+          </svg>
+          <span>Proyectos</span>
+        </a>
+        <a href="#skills" class="nav-item" data-target="skills">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M12 3.5l2.4 5 5.5.6-4.1 3.8 1.1 5.5L12 15.7l-4.9 2.7 1.1-5.5-4.1-3.8 5.5-.6L12 3.5z"
+              stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+          </svg>
+          <span>Aptitudes</span>
+        </a>
+        <a href="#contact" class="nav-item" data-target="contact">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path
+              d="M4 6.5A1.5 1.5 0 015.5 5h13A1.5 1.5 0 0120 6.5v9a1.5 1.5 0 01-1.5 1.5H9l-4 3.2V17H5.5A1.5 1.5 0 014 15.5v-9z"
+              stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+          </svg>
+          <span>Contacto</span>
+        </a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema"><span
+            class="theme-icon"></span></button>
+        <div class="nav-profile" id="navProfile">
+          <button class="nav-avatar-btn" id="navAvatarBtn" aria-haspopup="true">
+            <img src="Imgs/ImgJobUpdated.jpeg" alt="">
+            <svg class="caret" width="10" height="10" viewBox="0 0 10 10" fill="none">
+              <path d="M2 3.5L5 6.5L8 3.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </button>
+          <div class="nav-dropdown" id="navDropdown">
+            <a href="cv/cvJobPulache_FullStack_2026.pdf" target="_blank">Descargar CV — Full Stack</a>
+            <a href="cv/cvJobPulache_Programming_IT.pdf" target="_blank">Descargar CV — Programación / IT</a>
+            <a href="https://github.com/Job-Pulache" target="_blank">Ver GitHub ↗</a>
+          </div>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Menú"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══════════════ MOBILE MENU ═══════════════ -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mm-top">
+      <img src="Imgs/ImgJobUpdated.jpeg" class="mm-avatar" alt="">
+      <div>
+        <span class="mm-name">Job Pulache Carreño</span>
+        <span class="mm-tagline">Desarrollador Full Stack/Piura, Perú</span>
+      </div>
+    </div>
+    <div class="mm-search">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <circle cx="7" cy="7" r="5.5" stroke="currentColor" stroke-width="1.4" />
+        <path d="M11.2 11.2L14.5 14.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" />
+      </svg>
+      <input type="text" id="siteSearchMobile" placeholder="Buscar habilidades, proyectos…" autocomplete="off">
+    </div>
+    <nav class="mm-nav">
+      <a href="#hero" class="mm-link">Inicio</a>
+      <a href="#about" class="mm-link">Acerca de mí</a>
+      <a href="#experience" class="mm-link">Experiencia</a>
+      <a href="#projects" class="mm-link">Proyectos</a>
+      <a href="#skills" class="mm-link">Aptitudes</a>
+      <a href="#stats" class="mm-link">Métricas</a>
+      <a href="#interests" class="mm-link">Intereses</a>
+      <a href="#contact" class="mm-link">Contacto</a>
+    </nav>
+    <div class="mm-bottom">
+      <a href="cv/cvJobPulache_FullStack_2026.pdf" target="_blank" class="mm-cv">Descargar CV ↗</a>
+      <a href="https://github.com/Job-Pulache" target="_blank">GitHub ↗</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- ═══════════════ HERO / PROFILE HEADER ═══════════════ -->
+    <section class="profile-header" id="hero">
+      <div class="cover-banner">
+        <canvas id="networkCanvas"></canvas>
+        <div class="cover-fade"></div>
+      </div>
+
+      <div class="profile-header-inner">
+        <div class="avatar-block">
+          <div class="avatar-ring">
+            <img src="Imgs/ImgJobUpdated.jpeg" alt="Job Pulache Carreño" class="avatar-img">
+            <span class="avatar-dot" title="Disponible para nuevos proyectos"></span>
+          </div>
+        </div>
+
+        <div class="identity-block">
+          <div class="identity-top">
+            <h1>Job Pulache Carreño</h1>
+
+          </div>
+          <p class="headline">Desarrollador Full Stack. Systems Analtycs. Data Analytics</p>
+          <p class="sub-meta">
+            <img src="Imgs/marcador-de-alfiler.png" alt="ubi"><span>Piura, Perú</span><span class="dot">/</span>
+            <span>IDAT — Desarrollo de sistemas de información</span><span class="dot">/</span>
+            <a href="#contact">Info de contacto</a>
+          </p>
+          <div class="stat-pills">
+            <a href="#projects" class="stat-pill"><strong>10+</strong> proyectos entregados</a>
+            <a href="#experience" class="stat-pill"><strong>2+</strong> años de experiencia</a>
+            <a href="#stats" class="stat-pill"><strong>24h</strong> tiempo de respuesta</a>
+          </div>
+        </div>
+
+        <div class="action-block">
+          <button class="btn btn-primary" id="connectBtn" data-state="idle">Conectar</button>
+          <a href="#contact" class="btn btn-outline">Enviar mensaje</a>
+          <div class="more-menu">
+            <button class="btn btn-icon" id="moreBtn" aria-haspopup="true">Más <svg width="10" height="10"
+                viewBox="0 0 10 10" fill="none">
+                <path d="M2 3.5L5 6.5L8 3.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg></button>
+            <div class="more-dropdown" id="moreDropdown">
+              <a href="cv/cvJobPulache_FullStack_2026.pdf" target="_blank">Descargar CV (PDF)</a>
+              <a href="https://github.com/Job-Pulache" target="_blank">Ver GitHub ↗</a>
+              <button id="shareProfileBtn">Compartir perfil</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ STORIES / MOMENTOS ═══════════════ -->
+    <section class="stories-bar" aria-label="Momentos destacados">
+      <div class="stories-track">
+        <button class="story-item" data-img="Imgs/DatBase.jpg" data-title="AgroBrain IA">
+          <span class="story-ring"><img src="Imgs/DatBase.jpg" alt=""></span><em>AgroBrain IA</em>
+        </button>
+        <button class="story-item" data-img="Imgs/dashboard.png" data-title="SmartFlow OS">
+          <span class="story-ring"><img src="Imgs/dashboard.png" alt=""></span><em>SmartFlow OS</em>
+        </button>
+        <button class="story-item" data-img="Imgs/erpPuntoFerretero.png" data-title="ERP Punto Ferretero">
+          <span class="story-ring"><img src="Imgs/erpPuntoFerretero.png" alt=""></span><em>ERP Ferretero</em>
+        </button>
+        <button class="story-item" data-img="Imgs/atlanticity.png" data-title="AtlantiCRM 360">
+          <span class="story-ring"><img src="Imgs/atlanticity.png" alt=""></span><em>AtlantiCRM 360</em>
+        </button>
+        <button class="story-item" data-img="Imgs/puraFruit.png" data-title="PuraFruit Process Analytics">
+          <span class="story-ring"><img src="Imgs/puraFruit.png" alt=""></span><em>PuraFruit Process Analytics</em>
+        </button>
+        <button class="story-item" data-img="Imgs/closeuplearm.png" data-title="Learning Platform">
+          <span class="story-ring"><img src="Imgs/closeuplearm.png" alt=""></span><em>Learning platform</em>
+        </button>
+      </div>
+    </section>
+
+    <!-- ═══════════════ DISCOVERY BAR — FUSIÓN SOCIAL ═══════════════ -->
+    <section class="discovery-bar" aria-label="Explorar perfil">
+      <div class="discovery-inner">
+        <div class="discovery-label">Explorar</div>
+        <div class="discovery-chips">
+          <a class="discovery-chip active" href="#hero">Para ti</a>
+          <a class="discovery-chip" href="#projects">Proyectos</a>
+          <a class="discovery-chip" href="#experience">Trayectoria</a>
+          <a class="discovery-chip" href="#skills">Stack</a>
+          <a class="discovery-chip" href="#contact">Colaborar</a>
+        </div>
+        <span class="discovery-hint">Perfil profesional + actividad + portafolio</span>
+      </div>
+    </section>
+
+    <!-- ═══════════════ LAYOUT: sidebar / feed / sidebar ═══════════════ -->
+    <div class="layout">
+
+      <!-- ───── LEFT RAIL ───── -->
+      <aside class="rail rail-left">
+        <div class="card mini-card">
+          <img src="Imgs/ImgJobUpdated.jpeg" class="mini-avatar" alt="">
+          <h3>Job Pulache Carreño</h3>
+          <p>Desarrollador Full Stack</p>
+          <div class="mini-divider"></div>
+          <div class="mini-stat"><span>Visitas al perfil</span><strong id="profileViews">—</strong></div>
+          <div class="mini-stat"><span>Proyectos destacados</span><strong>6</strong></div>
+        </div>
+
+        <div class="card sectors-card">
+          <h4>Sectores en los que trabajo</h4>
+          <ul class="sector-list">
+            <li><span class="sector-dot sector-dot--ia"></span>Inteligencia Artificial <em>#automatización</em></li>
+            <li><span class="sector-dot sector-dot--web"></span>Desarrollo Web <em>#frontend #backend</em></li>
+            <li><span class="sector-dot sector-dot--data"></span>Datos y Sistemas <em>#sql #powerbi</em></li>
+            <li><span class="sector-dot sector-dot--it"></span>Infraestructura IT <em>#redes #soporte</em></li>
+          </ul>
+        </div>
+
+        <div class="card stack-card">
+          <h4>Stack &amp; herramientas</h4>
+          <div class="stack-grid">
+            <div class="stack-tile" style=""><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100"
+                height="100" viewBox="0 0 48 48">
+                <path fill="#0277BD"
+                  d="M24.047,5c-1.555,0.005-2.633,0.142-3.936,0.367c-3.848,0.67-4.549,2.077-4.549,4.67V14h9v2H15.22h-4.35c-2.636,0-4.943,1.242-5.674,4.219c-0.826,3.417-0.863,5.557,0,9.125C5.851,32.005,7.294,34,9.931,34h3.632v-5.104c0-2.966,2.686-5.896,5.764-5.896h7.236c2.523,0,5-1.862,5-4.377v-8.586c0-2.439-1.759-4.263-4.218-4.672C27.406,5.359,25.589,4.994,24.047,5z M19.063,9c0.821,0,1.5,0.677,1.5,1.502c0,0.833-0.679,1.498-1.5,1.498c-0.837,0-1.5-0.664-1.5-1.498C17.563,9.68,18.226,9,19.063,9z">
+                </path>
+                <path fill="#FFC107"
+                  d="M23.078,43c1.555-0.005,2.633-0.142,3.936-0.367c3.848-0.67,4.549-2.077,4.549-4.67V34h-9v-2h9.343h4.35c2.636,0,4.943-1.242,5.674-4.219c0.826-3.417,0.863-5.557,0-9.125C41.274,15.995,39.831,14,37.194,14h-3.632v5.104c0,2.966-2.686,5.896-5.764,5.896h-7.236c-2.523,0-5,1.862-5,4.377v8.586c0,2.439,1.759,4.263,4.218,4.672C19.719,42.641,21.536,43.006,23.078,43z M28.063,39c-0.821,0-1.5-0.677-1.5-1.502c0-0.833,0.679-1.498,1.5-1.498c0.837,0,1.5,0.664,1.5,1.498C29.563,38.32,28.899,39,28.063,39z">
+                </path>
+              </svg></div>
+            <div class="stack-tile" style="--tile:#F0DB4F; color:#1D2226"><img src="Imgs/js-official-svgrepo-com (2).svg" alt=""></div>
+            <div class="stack-tile" style="--tile:#CC2927">SQL</div>
+            <div class="stack-tile" style="--tile:#512BD4">.NET</div>
+            <div class="stack-tile" style="--tile:#61DAFB; color:#1D2226">Rx</div>
+            <div class="stack-tile" style="--tile:#F2C811; color:#1D2226">BI</div>
+            <div class="stack-tile" style="--tile:#F05032">Git</div>
+            <div class="stack-tile" style="--tile:#333333">Lx</div>
+            <div class="stack-tile" style="--tile:#2496ED">Dk</div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- ───── MAIN FEED ───── -->
+      <div class="feed">
+
+        <!-- VISUAL DISCOVERY — aire de TikTok sin videos -->
+        <section class="visual-showcase" aria-label="Proyectos destacados visualmente">
+          <div class="showcase-heading">
+            <div>
+              <h2>Ideas que se pueden recorrer</h2>
+            </div>
+            <a href="#projects">Ver todos ↗</a>
+          </div>
+          <div class="showcase-grid">
+            <a class="showcase-card showcase-card--large" href="#projects">
+              <img src="Imgs/DatBase.jpg" alt="AgroBrain IA" loading="lazy">
+              <div class="showcase-overlay">
+                <span class="showcase-type">PROYECTO INSIGNIA</span>
+                <strong>AgroBrain IA</strong>
+                <small>Operaciones agroindustriales. IA y Datos</small>
+              </div>
+            </a>
+            <a class="showcase-card" href="#projects">
+              <img src="Imgs/atlanticity.png" alt="AtlantiCRM 360" loading="lazy">
+              <div class="showcase-overlay">
+                <span class="showcase-type">PRODUCTO</span>
+                <strong>AtlantiCRM 360</strong>
+                <small>CRM. React. .NET</small>
+              </div>
+            </a>
+            <a class="showcase-card" href="#projects">
+              <img src="Imgs/dashboard.png" alt="SmartFlow OS" loading="lazy">
+              <div class="showcase-overlay">
+                <span class="showcase-type">DATA</span>
+                <strong>SmartFlow OS</strong>
+                <small>KPIs. Power BI. automatización</small>
+              </div>
+            </a>
+          </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section class="card about-card" id="about">
+          <h2>Acerca de mí</h2>
+          <p class="">Situado en la intersección del desarrollo de software, el diseño de sistemas y la creación de
+            soluciones digitales eficientes y elegantes.</p>
+          <p>Soy desarrollador de software con experiencia apoyando a empresas en la digitalización, gestión y
+            optimización de sus operaciones. Me enfoco en construir soluciones claras, funcionales y bien estructuradas,
+            combinando lógica, diseño y eficiencia</p>
+          <div class="skills-row">
+            <span class="skill-pill">Python</span>
+            <span class="skill-pill">JavaScript</span>
+            <span class="skill-pill">SQL Server</span>
+            <span class="skill-pill">.NET / C#</span>
+            <span class="skill-pill">React</span>
+            <span class="skill-pill">HTML / CSS</span>
+            <span class="skill-pill">Git</span>
+            <span class="skill-pill">Linux</span>
+            <span class="skill-pill">C#</span>
+          </div>
+        </section>
+
+        <!-- FEATURED -->
+        <section class="card featured-card" id="featured">
+          <h2>Destacado <span class="gold-tag">★ Featured</span></h2>
+          <div class="featured-scroll">
+            <a class="featured-item" href="https://fe.puntoferreteropy.com" target="_blank">
+              <img src="Imgs/erpPuntoFerretero.png" alt="ERP Punto Ferretero" loading="lazy">
+              <span>ERP · Punto Ferretero</span>
+            </a>
+            <a class="featured-item"
+              href="https://app.powerbi.com/groups/me/reports/3471cab4-cb5f-414e-815e-7767ef908482/edf0751370b4434eab71?experience=power-bi"
+              target="_blank">
+              <img src="Imgs/dashboard.png" alt="SmartFlow OS" loading="lazy">
+              <span>SmartFlow OS</span>
+            </a>
+            <a class="featured-item" href="#projects">
+              <img src="Imgs/DatBase.jpg" alt="AgroBrain IA" loading="lazy">
+              <span>AgroBrain IA</span>
+            </a>
+            <a class="featured-item" href="#projects">
+              <img src="Imgs/atlanticity.png" alt="AtlantiCRM 360" loading="lazy">
+              <span>AtlantiCRM 360</span>
+            </a>
+          </div>
+        </section>
+
+        <!-- EXPERIENCE -->
+        <section class="card experience-card" id="experience">
+          <h2>Experiencia</h2>
+          <p class="section-note">Aqui mis experiencias mas recientes. Para desbloquear toda mi trayectoria, arriba en
+            mi perfil encuentras mi CV.</p>
+          <div class="exp-list">
+            <article class="exp-item">
+              <div class="exp-logo">SA</div>
+              <div class="exp-body">
+                <h3>Analista de Sistemas — Digitalización Agrícola</h3>
+                <span class="exp-company">Sunshine Export. Tambogrande, Perú</span>
+                <p>Digitalización de procesos de campo y operaciones agrícolas, migrando flujos manuales hacia sistemas
+                  de registro y control. Automatizacion de procesos</p>
+              </div>
+            </article>
+            <article class="exp-item">
+              <div class="exp-logo">SP</div>
+              <div class="exp-body">
+                <h3>Soporte de RR.HH. y Reportería</h3>
+                <span class="exp-company">ProAgro. Piura, Perú</span>
+                <p>Gestión de reportes y procesos administrativos de recursos humanos. Auditorias, sistemas, planillas
+                </p>
+              </div>
+            </article>
+            <article class="exp-item">
+              <div class="exp-logo">SD</div>
+              <div class="exp-body">
+                <h3>Desarrollador de Software</h3>
+                <span class="exp-company">Proyecto freelance. Caraguatay, Paraguay</span>
+                <p>Diseño de una solución para digitalizar el control de inventario y el flujo logístico. Modulo de
+                  facturacion electronica</p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- PROJECTS AS ACTIVITY FEED -->
+        <section class="projects-feed" id="projects">
+          <h2 class="feed-title">Proyectos recientes</h2>
+
+          <div class="composer-card">
+            <div class="composer-top">
+              <img src="Imgs/ImgJobUpdated.jpeg" alt="">
+              <input type="text" id="composerOpen" placeholder="Escribe una nota para Job…" readonly>
+            </div>
+            <form class="composer-form" id="composerForm" hidden>
+              <input type="text" id="composerName" placeholder="Tu nombre (opcional)" autocomplete="off">
+              <textarea id="composerText" rows="3" placeholder="¿Qué le quieres contar a Job?" required></textarea>
+              <div class="composer-actions">
+                <button type="button" id="composerCancel" class="btn-text-only">Cancelar</button>
+                <button type="submit" class="btn btn-primary">Publicar</button>
+              </div>
+            </form>
+            <p class="composer-note">Tu nota se guarda solo en este navegador — es una libreta de visitas, no llega
+              automáticamente a Job. Para escribirle directo, usa <a href="#contact">Contacto</a>.</p>
+          </div>
+
+          <div id="guestbookFeed"></div>
+
+          <article class="post-card" data-tags="php laravel mysql javascript erp ferretero">
+            <header class="post-head">
+              <img src="Imgs/ImgJobUpdated.jpeg" class="post-avatar" alt="">
+              <div>
+                <strong>Job Pulache Carreño</strong>
+                <span>compartió un proyecto. <em>Cliente en producción</em></span>
+              </div>
+            </header>
+            <p class="post-text">Diseñé y desplegué un <strong>ERP para gestión empresarial</strong> — inventario,
+              ventas, facturación y reportes en un solo sistema. Reducción de tiempos operativos del 40% frente al
+              proceso manual anterior.</p>
+            <div class="post-tags">#PHP #Laravel #MySQL #JavaScript</div>
+            <a class="post-img-wrap" href="https://fe.puntoferreteropy.com" target="_blank">
+              <img src="Imgs/erpPuntoFerretero.png" alt="ERP Punto Ferretero" loading="lazy">
+              <span class="post-visit">Ver proyecto en vivo ↗</span>
+            </a>
+            <footer class="post-actions" data-post="erp-ferretero" data-base-reactions="46" data-base-comments="6">
+              <div class="reaction-wrap">
+                <button class="react-main" aria-haspopup="true"><span class="react-emoji">👍</span><span
+                    class="react-label">Reaccionar</span></button>
+                <div class="reaction-picker" role="menu">
+                  <button data-emo="like" title="Me gusta">👍</button>
+                  <button data-emo="love" title="Me encanta">❤️</button>
+                  <button data-emo="insight" title="Interesante">💡</button>
+                  <button data-emo="support" title="Apoyo">👏</button>
+                  <button data-emo="celebrate" title="Celebrar">🎉</button>
+                </div>
+                <span class="reaction-total">46 reacciones</span>
+              </div>
+              <button class="cmt-btn" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M4 6.5A1.5 1.5 0 015.5 5h13A1.5 1.5 0 0120 6.5v9a1.5 1.5 0 01-1.5 1.5H9l-4 3.2V17H5.5A1.5 1.5 0 014 15.5v-9z"
+                    stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" />
+                </svg><span class="cmt-count">6</span> comentarios</button>
+              <button class="share-btn"><svg viewBox="0 0 24 24" fill="none">
+                  <path d="M15 5l5 5-5 5M20 10H10a6 6 0 00-6 6v1" stroke="currentColor" stroke-width="1.4"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </svg> Compartir</button>
+            </footer>
+            <div class="comments-panel" id="comments-erp-ferretero" hidden>
+              <div class="comments-list" id="comments-list-erp-ferretero"></div>
+              <form class="comment-form" data-post="erp-ferretero">
+                <input type="text" class="comment-name" placeholder="Tu nombre (opcional)" autocomplete="off">
+                <div class="comment-input-row">
+                  <input type="text" class="comment-text" placeholder="Añade un comentario…" autocomplete="off"
+                    required>
+                  <button type="submit">Publicar</button>
+                </div>
+              </form>
+            </div>
+          </article>
+
+          <article class="post-card" data-tags="sql server power bi apis excel postman smartflow crm automatizacion">
+            <header class="post-head">
+              <img src="Imgs/ImgJobUpdated.jpeg" class="post-avatar" alt="">
+              <div>
+                <strong>Job Pulache Carreño</strong>
+                <span>compartió un proyecto. <em>Producto propio</em></span>
+              </div>
+            </header>
+            <p class="post-text"><strong>SmartFlow OS</strong> — una plataforma que integra CRM, automatización de
+              procesos, monitoreo de APIs y gestión de incidencias en un solo ecosistema. Ahorra cerca de 8 horas
+              semanales de trabajo manual.</p>
+            <div class="post-tags">#SQLServer #PowerBI #APIs #Excel #Postman</div>
+            <a class="post-img-wrap"
+              href="https://app.powerbi.com/groups/me/reports/3471cab4-cb5f-414e-815e-7767ef908482/edf0751370b4434eab71?experience=power-bi"
+              target="_blank">
+              <img src="Imgs/dashboard.png" alt="SmartFlow OS" loading="lazy">
+              <span class="post-visit">Ver dashboard ↗</span>
+            </a>
+            <footer class="post-actions" data-post="smartflow-os" data-base-reactions="46" data-base-comments="9">
+              <div class="reaction-wrap">
+                <button class="react-main" aria-haspopup="true"><span class="react-emoji">👍</span><span
+                    class="react-label">Reaccionar</span></button>
+                <div class="reaction-picker" role="menu">
+                  <button data-emo="like" title="Me gusta">👍</button>
+                  <button data-emo="love" title="Me encanta">❤️</button>
+                  <button data-emo="insight" title="Interesante">💡</button>
+                  <button data-emo="support" title="Apoyo">👏</button>
+                  <button data-emo="celebrate" title="Celebrar">🎉</button>
+                </div>
+                <span class="reaction-total">46 reacciones</span>
+              </div>
+              <button class="cmt-btn" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M4 6.5A1.5 1.5 0 015.5 5h13A1.5 1.5 0 0120 6.5v9a1.5 1.5 0 01-1.5 1.5H9l-4 3.2V17H5.5A1.5 1.5 0 014 15.5v-9z"
+                    stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" />
+                </svg><span class="cmt-count">9</span> comentarios</button>
+              <button class="share-btn"><svg viewBox="0 0 24 24" fill="none">
+                  <path d="M15 5l5 5-5 5M20 10H10a6 6 0 00-6 6v1" stroke="currentColor" stroke-width="1.4"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </svg> Compartir</button>
+            </footer>
+            <div class="comments-panel" id="comments-smartflow-os" hidden>
+              <div class="comments-list" id="comments-list-smartflow-os"></div>
+              <form class="comment-form" data-post="smartflow-os">
+                <input type="text" class="comment-name" placeholder="Tu nombre (opcional)" autocomplete="off">
+                <div class="comment-input-row">
+                  <input type="text" class="comment-text" placeholder="Añade un comentario…" autocomplete="off"
+                    required>
+                  <button type="submit">Publicar</button>
+                </div>
+              </form>
+            </div>
+          </article>
+
+          <article class="post-card"
+            data-tags="clean architecture asp.net core sql server react power bi docker agrobrain agroindustria">
+            <header class="post-head">
+              <img src="Imgs/ImgJobUpdated.jpeg" class="post-avatar" alt="">
+              <div>
+                <strong>Job Pulache Carreño</strong>
+                <span>compartió un proyecto. <em>Proyecto en desarrollo</em></span>
+              </div>
+            </header>
+            <p class="post-text"><strong>AgroBrain IA</strong> — mi plataforma insignia de gestión inteligente de
+              operaciones agroindustriales, construida con Clean Architecture. Centraliza procesos de campo, datos y
+              reportes en un solo lugar.</p>
+            <div class="post-tags">#CleanArchitecture #ASPNETCore #SQLServer #React #PowerBI #Docker</div>
+            <div class="post-img-wrap">
+              <img src="Imgs/DatBase.jpg" alt="AgroBrain IA" loading="lazy">
+            </div>
+            <footer class="post-actions" data-post="agrobrain-ia" data-base-reactions="67" data-base-comments="11">
+              <div class="reaction-wrap">
+                <button class="react-main" aria-haspopup="true"><span class="react-emoji">👍</span><span
+                    class="react-label">Reaccionar</span></button>
+                <div class="reaction-picker" role="menu">
+                  <button data-emo="like" title="Me gusta">👍</button>
+                  <button data-emo="love" title="Me encanta">❤️</button>
+                  <button data-emo="insight" title="Interesante">💡</button>
+                  <button data-emo="support" title="Apoyo">👏</button>
+                  <button data-emo="celebrate" title="Celebrar">🎉</button>
+                </div>
+                <span class="reaction-total">67 reacciones</span>
+              </div>
+              <button class="cmt-btn" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M4 6.5A1.5 1.5 0 015.5 5h13A1.5 1.5 0 0120 6.5v9a1.5 1.5 0 01-1.5 1.5H9l-4 3.2V17H5.5A1.5 1.5 0 014 15.5v-9z"
+                    stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" />
+                </svg><span class="cmt-count">11</span> comentarios</button>
+              <button class="share-btn"><svg viewBox="0 0 24 24" fill="none">
+                  <path d="M15 5l5 5-5 5M20 10H10a6 6 0 00-6 6v1" stroke="currentColor" stroke-width="1.4"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </svg> Compartir</button>
+            </footer>
+            <div class="comments-panel" id="comments-agrobrain-ia" hidden>
+              <div class="comments-list" id="comments-list-agrobrain-ia"></div>
+              <form class="comment-form" data-post="agrobrain-ia">
+                <input type="text" class="comment-name" placeholder="Tu nombre (opcional)" autocomplete="off">
+                <div class="comment-input-row">
+                  <input type="text" class="comment-text" placeholder="Añade un comentario…" autocomplete="off"
+                    required>
+                  <button type="submit">Publicar</button>
+                </div>
+              </form>
+            </div>
+          </article>
+
+          <article class="post-card" data-tags="clean architecture .net react tailwind crm atlanticrm hubspot teams">
+            <header class="post-head">
+              <img src="Imgs/ImgJobUpdated.jpeg" class="post-avatar" alt="">
+              <div>
+                <strong>Job Pulache Carreño</strong>
+                <span>compartió un proyecto. <em>Proyecto universitario</em></span>
+              </div>
+            </header>
+            <p class="post-text"><strong>AtlantiCRM 360</strong> — CRM empresarial de portafolio, inspirado en la
+              identidad visual de HubSpot y Teams. Clean Architecture en el backend, React + Tailwind en el frontend,
+              con búsqueda global, filtros y exportación a Excel.</p>
+            <div class="post-tags">#CleanArchitecture #DotNET #React #TailwindCSS #EntityFrameworkCore</div>
+            <div class="post-img-wrap">
+              <img src="Imgs/atlanticity.png" alt="AtlantiCRM 360" loading="lazy">
+            </div>
+            <footer class="post-actions" data-post="atlanticrm-360" data-base-reactions="26" data-base-comments="4">
+              <div class="reaction-wrap">
+                <button class="react-main" aria-haspopup="true"><span class="react-emoji">👍</span><span
+                    class="react-label">Reaccionar</span></button>
+                <div class="reaction-picker" role="menu">
+                  <button data-emo="like" title="Me gusta">👍</button>
+                  <button data-emo="love" title="Me encanta">❤️</button>
+                  <button data-emo="insight" title="Interesante">💡</button>
+                  <button data-emo="support" title="Apoyo">👏</button>
+                  <button data-emo="celebrate" title="Celebrar">🎉</button>
+                </div>
+                <span class="reaction-total">26 reacciones</span>
+              </div>
+              <button class="cmt-btn" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M4 6.5A1.5 1.5 0 015.5 5h13A1.5 1.5 0 0120 6.5v9a1.5 1.5 0 01-1.5 1.5H9l-4 3.2V17H5.5A1.5 1.5 0 014 15.5v-9z"
+                    stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" />
+                </svg><span class="cmt-count">4</span> comentarios</button>
+              <button class="share-btn"><svg viewBox="0 0 24 24" fill="none">
+                  <path d="M15 5l5 5-5 5M20 10H10a6 6 0 00-6 6v1" stroke="currentColor" stroke-width="1.4"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </svg> Compartir</button>
+            </footer>
+            <div class="comments-panel" id="comments-atlanticrm-360" hidden>
+              <div class="comments-list" id="comments-list-atlanticrm-360"></div>
+              <form class="comment-form" data-post="atlanticrm-360">
+                <input type="text" class="comment-name" placeholder="Tu nombre (opcional)" autocomplete="off">
+                <div class="comment-input-row">
+                  <input type="text" class="comment-text" placeholder="Añade un comentario…" autocomplete="off"
+                    required>
+                  <button type="submit">Publicar</button>
+                </div>
+              </form>
+            </div>
+          </article>
+
+          <article class="post-card" data-tags="bizagi bpmn excel power bi purafruit rpms procesos">
+            <header class="post-head">
+              <img src="Imgs/ImgJobUpdated.jpeg" class="post-avatar" alt="">
+              <div>
+                <strong>Job Pulache Carreño</strong>
+                <span>compartió un proyecto. <em>Aplicación a proceso de selección</em></span>
+              </div>
+            </header>
+            <p class="post-text"><strong>PuraFruit RPMS</strong> — portafolio de analista de procesos: diagramas BPMN
+              AS-IS/TO-BE en Bizagi, datasets y KPIs en Excel, y visualizaciones en Power BI.</p>
+            <div class="post-tags">#Bizagi #BPMN #Excel #PowerBI #ProcessAnalytics</div>
+            <a class="post-img-wrap" href="https://processanalytcsjobpulache.netlify.app" target="_blank">
+              <img src="Imgs/puraFruit.png" alt="PuraFruit RPMS" loading="lazy">
+              <span class="post-visit">Ver proyecto ↗</span>
+            </a>
+            <footer class="post-actions" data-post="purafruit-rpms" data-base-reactions="21" data-base-comments="3">
+              <div class="reaction-wrap">
+                <button class="react-main" aria-haspopup="true"><span class="react-emoji">👍</span><span
+                    class="react-label">Reaccionar</span></button>
+                <div class="reaction-picker" role="menu">
+                  <button data-emo="like" title="Me gusta">👍</button>
+                  <button data-emo="love" title="Me encanta">❤️</button>
+                  <button data-emo="insight" title="Interesante">💡</button>
+                  <button data-emo="support" title="Apoyo">👏</button>
+                  <button data-emo="celebrate" title="Celebrar">🎉</button>
+                </div>
+                <span class="reaction-total">21 reacciones</span>
+              </div>
+              <button class="cmt-btn" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M4 6.5A1.5 1.5 0 015.5 5h13A1.5 1.5 0 0120 6.5v9a1.5 1.5 0 01-1.5 1.5H9l-4 3.2V17H5.5A1.5 1.5 0 014 15.5v-9z"
+                    stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" />
+                </svg><span class="cmt-count">3</span> comentarios</button>
+              <button class="share-btn"><svg viewBox="0 0 24 24" fill="none">
+                  <path d="M15 5l5 5-5 5M20 10H10a6 6 0 00-6 6v1" stroke="currentColor" stroke-width="1.4"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </svg> Compartir</button>
+            </footer>
+            <div class="comments-panel" id="comments-purafruit-rpms" hidden>
+              <div class="comments-list" id="comments-list-purafruit-rpms"></div>
+              <form class="comment-form" data-post="purafruit-rpms">
+                <input type="text" class="comment-name" placeholder="Tu nombre (opcional)" autocomplete="off">
+                <div class="comment-input-row">
+                  <input type="text" class="comment-text" placeholder="Añade un comentario…" autocomplete="off"
+                    required>
+                  <button type="submit">Publicar</button>
+                </div>
+              </form>
+            </div>
+          </article>
+
+          <article class="post-card" data-tags="streamlit plotly python terminal de campo dashboard">
+            <header class="post-head">
+              <img src="Imgs/ImgJobUpdated.jpeg" class="post-avatar" alt="">
+              <div>
+                <strong>Job Pulache Carreño</strong>
+                <span>compartió un proyecto. <em>Mi Portafolio para agroindustria</em></span>
+              </div>
+            </header>
+            <p class="post-text"><strong>Portfolio para Agroindustria</strong> — un portafolio interactivo construido
+              con Streamlit + Plotly, con estética de terminal monoespaciada, que integra mi trabajo de analítica de
+              procesos y AgroBrain IA.</p>
+            <div class="post-tags">#Streamlit #Plotly #Python</div>
+            <a class="post-img-wrap" href="https://dataportfolio-jobpulache.streamlit.app/" target="_blank">
+              <img src="Imgs/pageAgro.png" alt="PuraFruit RPMS" loading="lazy">
+              <span class="post-visit">Ver proyecto ↗</span>
+            </a>
+            <footer class="post-actions" data-post="terminal-de-campo" data-base-reactions="31" data-base-comments="5">
+              <div class="reaction-wrap">
+                <button class="react-main" aria-haspopup="true"><span class="react-emoji">👍</span><span
+                    class="react-label">Reaccionar</span></button>
+                <div class="reaction-picker" role="menu">
+                  <button data-emo="like" title="Me gusta">👍</button>
+                  <button data-emo="love" title="Me encanta">❤️</button>
+                  <button data-emo="insight" title="Interesante">💡</button>
+                  <button data-emo="support" title="Apoyo">👏</button>
+                  <button data-emo="celebrate" title="Celebrar">🎉</button>
+                </div>
+                <span class="reaction-total">31 reacciones</span>
+              </div>
+              <button class="cmt-btn" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M4 6.5A1.5 1.5 0 015.5 5h13A1.5 1.5 0 0120 6.5v9a1.5 1.5 0 01-1.5 1.5H9l-4 3.2V17H5.5A1.5 1.5 0 014 15.5v-9z"
+                    stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" />
+                </svg><span class="cmt-count">5</span> comentarios</button>
+              <button class="share-btn"><svg viewBox="0 0 24 24" fill="none">
+                  <path d="M15 5l5 5-5 5M20 10H10a6 6 0 00-6 6v1" stroke="currentColor" stroke-width="1.4"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </svg> Compartir</button>
+            </footer>
+            <div class="comments-panel" id="comments-terminal-de-campo" hidden>
+              <div class="comments-list" id="comments-list-terminal-de-campo"></div>
+              <form class="comment-form" data-post="terminal-de-campo">
+                <input type="text" class="comment-name" placeholder="Tu nombre (opcional)" autocomplete="off">
+                <div class="comment-input-row">
+                  <input type="text" class="comment-text" placeholder="Añade un comentario…" autocomplete="off"
+                    required>
+                  <button type="submit">Publicar</button>
+                </div>
+              </form>
+            </div>
+          </article>
+
+        </section>
+
+        <!-- SKILLS / ENDORSEMENTS -->
+        <section class="card skills-card" id="skills">
+          <h2>Aptitudes y validaciones</h2>
+          <p class="section-note">Haz clic en «Validar» para respaldar una aptitud — igual que en LinkedIn.</p>
+          <ul class="endorse-list" id="endorseList">
+            <li data-skill="Python" data-base="27"><span class="endorse-name">Python</span><span
+                class="endorse-count">27</span><button class="endorse-btn">Validar +</button></li>
+            <li data-skill="JavaScript" data-base="24"><span class="endorse-name">JavaScript</span><span
+                class="endorse-count">24</span><button class="endorse-btn">Validar +</button></li>
+            <li data-skill="SQL Server" data-base="21"><span class="endorse-name">SQL Server</span><span
+                class="endorse-count">21</span><button class="endorse-btn">Validar +</button></li>
+            <li data-skill=".NET / C#" data-base="17"><span class="endorse-name">.NET / C#</span><span
+                class="endorse-count">17</span><button class="endorse-btn">Validar +</button></li>
+            <li data-skill="React" data-base="16"><span class="endorse-name">React</span><span
+                class="endorse-count">16</span><button class="endorse-btn">Validar +</button></li>
+            <li data-skill="Power BI" data-base="14"><span class="endorse-name">Power BI</span><span
+                class="endorse-count">14</span><button class="endorse-btn">Validar +</button></li>
+            <li data-skill="Clean Architecture" data-base="12"><span class="endorse-name">Clean Architecture</span><span
+                class="endorse-count">12</span><button class="endorse-btn">Validar +</button></li>
+            <li data-skill="Linux" data-base="19"><span class="endorse-name">C#</span><span
+                class="endorse-count">19</span><button class="endorse-btn">Validar +</button></li>
+          </ul>
+        </section>
+
+        <!-- RECOMMENDATIONS (honest empty state) -->
+        <section class="card recs-card">
+          <h2>Recomendaciones</h2>
+          <div class="recs-empty">
+            <div class="recs-empty-icon">✎</div>
+            <p>Todavía no hay recomendaciones escritas aquí.</p>
+            <p class="recs-empty-sub">Si trabajamos juntos, me encantaría leer la tuya — escríbeme desde <a
+                href="#contact">Contacto</a>.</p>
+          </div>
+        </section>
+
+        <!-- INTERESTS -->
+        <section class="card interests-card" id="interests">
+          <h2>Intereses</h2>
+          <div class="interests-list">
+            <div class="interest-item">
+              <div class="interest-icon">I</div>
+              <div>
+                <h3>Inteligencia Artificial</h3>
+                <p>Algoritmos, automatización inteligente y sistemas de apoyo a la decisión aplicados a problemas
+                  reales.</p>
+              </div>
+              <button class="follow-btn">+ Seguir</button>
+            </div>
+            <div class="interest-item">
+              <div class="interest-icon">II</div>
+              <div>
+                <h3>Ingeniería de Software</h3>
+                <p>Buenas prácticas, arquitectura de sistemas y código limpio con patrones de diseño robustos.</p>
+              </div>
+              <button class="follow-btn">+ Seguir</button>
+            </div>
+            <div class="interest-item">
+              <div class="interest-icon">III</div>
+              <div>
+                <h3>Sistemas y Datos</h3>
+                <p>Bases de datos, optimización de consultas y conexión entre datos y decisiones estratégicas.</p>
+              </div>
+              <button class="follow-btn">+ Seguir</button>
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- ───── RIGHT RAIL ───── -->
+      <aside class="rail rail-right" id="stats">
+        <div class="card stats-card">
+          <h4>Analítica</h4>
+          <div class="stat-row">
+            <span>Proyectos entregados</span>
+            <div class="mini-ring" data-target="10"><svg viewBox="0 0 40 40">
+                <circle cx="20" cy="20" r="16" class="ring-bg" />
+                <circle cx="20" cy="20" r="16" class="ring-fill" />
+              </svg><strong>10+</strong></div>
+          </div>
+          <div class="stat-row">
+            <span>Clientes satisfechos</span>
+            <div class="mini-ring" data-target="8"><svg viewBox="0 0 40 40">
+                <circle cx="20" cy="20" r="16" class="ring-bg" />
+                <circle cx="20" cy="20" r="16" class="ring-fill" />
+              </svg><strong>8+</strong></div>
+          </div>
+          <div class="commit-bars">
+            <div class="commit-row"><span>Puntualidad</span>
+              <div class="commit-track">
+                <div class="commit-fill" data-w="95"></div>
+              </div><em>95%</em>
+            </div>
+            <div class="commit-row"><span>Calidad</span>
+              <div class="commit-track">
+                <div class="commit-fill" data-w="100"></div>
+              </div><em>100%</em>
+            </div>
+            <div class="commit-row"><span>Soporte</span>
+              <div class="commit-track">
+                <div class="commit-fill" data-w="90"></div>
+              </div><em>90%</em>
+            </div>
+          </div>
+          <div class="response-line"><strong>24h</strong><span>tiempo máximo de respuesta</span></div>
+        </div>
+
+        <div class="card services-card">
+          <h4>Servicios</h4>
+          <ul class="service-mini-list">
+            <li><strong>Desarrollo de software</strong><span>Soluciones eficientes y escalables</span></li>
+            <li><strong>Diseño y desarrollo web</strong><span>Sitios modernos y accesibles</span></li>
+            <li><strong>Gestión de bases de datos</strong><span>Diseño, optimización y mantenimiento</span></li>
+            <li><strong>Soporte técnico e IT</strong><span>Preventivo, correctivo e infraestructura</span></li>
+          </ul>
+        </div>
+
+        <div class="card cta-card">
+          <p>¿Buscas a alguien para digitalizar procesos o construir tu próximo producto?</p>
+          <a href="#contact" class="btn btn-primary btn-full">Iniciar conversación</a>
+        </div>
+      </aside>
+
+    </div>
+
+    <!-- ═══════════════ CONTACT (compose) ═══════════════ -->
+    <section class="contact-section" id="contact">
+      <div class="contact-inner">
+        <h2>Enviar un mensaje</h2>
+        <p>¿Tienes una idea, un proyecto o simplemente quieres conversar? Estoy abierto a nuevas oportunidades.</p>
+        <form class="compose-form" id="contactForm" novalidate>
+          <div class="compose-row">
+            <div class="compose-field">
+              <label for="nombre">Nombre</label>
+              <input type="text" id="nombre" name="nombre" required autocomplete="off">
+            </div>
+            <div class="compose-field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required autocomplete="off">
+            </div>
+          </div>
+          <div class="compose-field">
+            <label for="asunto">Asunto</label>
+            <input type="text" id="asunto" name="asunto" autocomplete="off">
+          </div>
+          <div class="compose-field">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" id="submitBtn">Enviar mensaje</button>
+          <div class="form-success" id="formSuccess">✓ Mensaje enviado. Gracias por escribir.</div>
+          <div class="form-error" id="formError">Completa los campos requeridos.</div>
+        </form>
+        <div class="contact-socials">
+          <a href="https://github.com/Job-Pulache" target="_blank">GitHub ↗</a>
+          <a href="#">LinkedIn ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span class="footer-logo">JobPulCar<span>.</span></span>
+      <span class="footer-copy">© 2026 Job Pulache Carreño — Piura, Perú</span>
+      <a href="#hero" class="back-top">↑ Volver arriba</a>
+    </div>
+  </footer>
+
+  <!-- ═══════════════ MOBILE BOTTOM TAB BAR ═══════════════ -->
+  <nav class="tab-bar" aria-label="Navegación móvil">
+    <a href="#hero" class="tab-item active" data-target="hero"><svg viewBox="0 0 24 24" fill="none">
+        <path d="M4 11.5L12 4l8 7.5M6 10v9h5v-6h2v6h5v-9" stroke="currentColor" stroke-width="1.7"
+          stroke-linecap="round" stroke-linejoin="round" />
+      </svg><span>Inicio</span></a>
+    <a href="#projects" class="tab-item" data-target="projects"><svg viewBox="0 0 24 24" fill="none">
+        <rect x="4" y="4" width="7" height="7" rx="1.2" stroke="currentColor" stroke-width="1.7" />
+        <rect x="13" y="4" width="7" height="7" rx="1.2" stroke="currentColor" stroke-width="1.7" />
+        <rect x="4" y="13" width="7" height="7" rx="1.2" stroke="currentColor" stroke-width="1.7" />
+        <rect x="13" y="13" width="7" height="7" rx="1.2" stroke="currentColor" stroke-width="1.7" />
+      </svg><span>Proyectos</span></a>
+    <a href="#skills" class="tab-item" data-target="skills"><svg viewBox="0 0 24 24" fill="none">
+        <path d="M12 3.5l2.4 5 5.5.6-4.1 3.8 1.1 5.5L12 15.7l-4.9 2.7 1.1-5.5-4.1-3.8 5.5-.6L12 3.5z"
+          stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+      </svg><span>Aptitudes</span></a>
+    <a href="#contact" class="tab-item" data-target="contact"><svg viewBox="0 0 24 24" fill="none">
+        <path
+          d="M4 6.5A1.5 1.5 0 015.5 5h13A1.5 1.5 0 0120 6.5v9a1.5 1.5 0 01-1.5 1.5H9l-4 3.2V17H5.5A1.5 1.5 0 014 15.5v-9z"
+          stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" />
+      </svg><span>Contacto</span></a>
+    <button class="tab-item" id="tabMenuBtn"><svg viewBox="0 0 24 24" fill="none">
+        <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+      </svg><span>Menú</span></button>
+  </nav>
+
+  <!-- ═══════════════ LIGHTBOX ═══════════════ -->
+  <div class="lightbox" id="lightbox" hidden>
+    <button class="lightbox-close" id="lightboxClose" aria-label="Cerrar">✕</button>
+    <figure>
+      <img src="" alt="" id="lightboxImg">
+      <figcaption id="lightboxCaption"></figcaption>
+    </figure>
+  </div>
+
+  <!-- ═══════════════ TOASTS ═══════════════ -->
+  <div class="toast-stack" id="toastStack" aria-live="polite"></div>
+
+  <script src="js/js.js"></script>
+</body>
+
+</html>
